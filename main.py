@@ -14,14 +14,14 @@ castles = [(200, 200), (300, 500)]
 mines = [(w-200, h-200), (500, 500)]
 
 agents = []
-for i in range(200):
+for i in range(300):
     agents.append(Agent(window, w, h, sr_speed, rad, castles, mines))
 
 
 game, move_c, move_m = True, -1, -1
 while game:
     clock.tick(0)
-    pg.display.set_caption(str(int(clock.get_fps())))
+    pg.display.set_caption('Роевой интеллект   FPS:'+str(int(clock.get_fps())))
     window.fill((0, 130, 0))
 
     if move_c != -1:
